@@ -6,13 +6,13 @@ export default function Header() {
 
 
     return (
-        <header className="flex">
-            <img id="logo" src={pad} alt="padIMG" />
+        <header className="flex h-23 p-2.5 shadow-(--custom-shadow)">
+            <img className="h-full p-2.5" src={pad} alt="padIMG" />
 
             <nav className="flex">
 
 
-                <NavLink className="nav-link button" to="/games">Lista Giochi</NavLink>
+                <NavLink className="flex mx-2.5 items-center hover:scale-120" to="/games">Lista Giochi</NavLink>
 
 
 

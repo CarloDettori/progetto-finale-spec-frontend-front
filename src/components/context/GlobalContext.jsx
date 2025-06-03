@@ -4,7 +4,7 @@ const GlobalContext = createContext()
 
 
 const GlobalProvider = ({ children }) => {
-    const [data, setData] = useState([])
+    const [games, setGames] = useState([])
 
     async function fetchData(url) {
         const response = await fetch(url)
@@ -17,13 +17,13 @@ const GlobalProvider = ({ children }) => {
 
     useEffect(() => {
         fetchData("http://localhost:3001/games")
-            .then(obj => setData(obj))
+            .then(obj => setGames(obj))
             .catch(error => console.error(error))
             .finally(console.log("fetch end"))
     }, [])
 
     return (
-        <GlobalContext.Provider value={{ data, setData }}>
+        <GlobalContext.Provider value={{ games, setGames }}>
             {children}
         </GlobalContext.Provider>)
 };

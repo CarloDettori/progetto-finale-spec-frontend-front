@@ -1,53 +1,5 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-
-header,
-footer {
-    display: flex;
-    padding: 10px;
-    box-shadow: 0px 0px 5px
-}
-
-header {
-    height: 90px;
-}
-
-footer {
-    justify-content: center;
-}
-
-nav {
-    align-items: center;
-    margin: 0 10px
-}
-
-.nav-link:hover {
-    transform: scale(1.2);
-}
-
-main {
-    padding: 50px;
-    min-height: 100vh;
-    background-color: #1a5ac92a;
-
-}
-
-section {
-    max-width: 1200px;
-    margin: 0 auto
-}
-
-h1 {
-    padding-bottom: 30px;
-}
-
-#logo {
-    height: 100%;
-    padding: 10px;
+:root {
+    --custom-shadow: 0px 0px 5px;
 }
 
 @import "tailwindcss";

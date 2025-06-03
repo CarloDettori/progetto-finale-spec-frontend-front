@@ -2,9 +2,9 @@
 export default function HomePage() {
 
     return (
-        <section>
-            <h1>Benvenuto su Gaming Zone!</h1>
 
-        </section>
+        <h1 className="pb-7.5">Benvenuto su Gaming Zone!</h1>
+
+
     )
 }
