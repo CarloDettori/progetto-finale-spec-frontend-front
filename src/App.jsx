@@ -1,11 +1,23 @@
-import { useContext } from "react";
-import { GlobalContext } from "./components/context/GlobalContext.jsx"
+
+import { GlobalProvider } from "./components/context/GlobalContext.jsx";
+import GameListPage from "./components/pages/GameListPage.jsx";
+import HomePage from "./components/pages/HomePage.jsx";
+import DefaultLayout from "./components/pages/DefaultLayout.jsx";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 function App() {
-  const { data } = useContext(GlobalContext)
-  console.log(data)
+
   return (
-    <h1>EJA</h1>
+    <GlobalProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<DefaultLayout />}>
+            <Route index element={<HomePage />} />
+            <Route path="/games" element={<GameListPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </GlobalProvider>
   )
 }
 

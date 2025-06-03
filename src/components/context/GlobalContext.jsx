@@ -9,7 +9,6 @@ const GlobalProvider = ({ children }) => {
     async function fetchData(url) {
         const response = await fetch(url)
         const dati = response.json()
-        console.log(dati)
         return dati
     }
 
