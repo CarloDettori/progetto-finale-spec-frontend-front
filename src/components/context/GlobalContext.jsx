@@ -3,14 +3,30 @@ const GlobalContext = createContext()
 
 
 
-export default function GlobalProvider({ children }) {
+const GlobalProvider = ({ children }) => {
     const [data, setData] = useState([])
 
-    // fetch
+    async function fetchData(url) {
+        const response = await fetch(url)
+        const dati = response.json()
+        console.log(dati)
+        return dati
+    }
 
-    useEffect(() => { }, [])
 
-    return (<GlobalContext.Provider value={{ data, setData }}>
-        {children}
-    </GlobalContext.Provider>)
+
+
+    useEffect(() => {
+        fetchData("http://localhost:3001/games")
+            .then(obj => setData(obj))
+            .catch(error => console.error(error))
+            .finally(console.log("fetch end"))
+    }, [])
+
+    return (
+        <GlobalContext.Provider value={{ data, setData }}>
+            {children}
+        </GlobalContext.Provider>)
 };
+
+export { GlobalContext, GlobalProvider }
