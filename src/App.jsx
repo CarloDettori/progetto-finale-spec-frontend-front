@@ -3,6 +3,7 @@ import { GlobalProvider } from "./components/context/GlobalContext.jsx";
 import HomePage from "./components/pages/HomePage.jsx";
 import GameListPage from "./components/pages/GameListPage.jsx";
 import ComparisonPage from "./components/pages/ComparisonPage.jsx";
+import GameDettailPage from "./components/pages/GameDetailPage.jsx";
 import DefaultLayout from "./components/pages/DefaultLayout.jsx";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 
@@ -14,7 +15,9 @@ function App() {
         <Routes>
           <Route element={<DefaultLayout />}>
             <Route index element={<HomePage />} />
-            <Route path="/games" element={<GameListPage />} />
+            <Route path="/games" element={<GameListPage />}>
+
+            </Route>
             <Route path="/compare" element={<ComparisonPage />} />
           </Route>
         </Routes>

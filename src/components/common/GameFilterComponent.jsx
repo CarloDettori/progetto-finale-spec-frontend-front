@@ -5,13 +5,8 @@ import GameCardComponent from "./GameCardComponent";
 
 export default function GameFilterComponent({ games }) {
 
-
     const [searchQuery, setSearchQuery] = useState("");
     const [selectValue, setSelectValue] = useState("");
-    const [categories, setCategories] = useState([]);
-
-
-
 
     function debounce(callback, delay) {
         let timer;
@@ -32,15 +27,26 @@ export default function GameFilterComponent({ games }) {
             setSelectValue(value)
         }
 
-    }, 400)
+    }, 500)
+
+    const [sortBy, setSortBy] = useState("title");
+    const [sortOrder, setSortOrder] = useState(1);
+
+    const handleSort = (column) => {
+        if (sortBy === column) {
+            setSortOrder((prev) => prev * -1);
+        } else {
+            setSortBy(column);
+            setSortOrder(1);
+        }
+    };
 
 
     const filteredGames = useMemo(() => {
 
         if (!games) return [];
 
-
-        let filtered = [...games];
+        let filtered = games;
 
         if (selectValue.trim() !== "" && selectValue.trim() !== "-") {
             filtered = filtered.filter(game =>
@@ -54,9 +60,28 @@ export default function GameFilterComponent({ games }) {
             );
         }
 
-        return filtered;
+        const gameCopy = [...filtered];
 
-    }, [games, searchQuery, selectValue]);
+        gameCopy.sort((a, b) => {
+
+            let result = 0;
+
+            if (sortBy === "title") {
+                result = a.title.localeCompare(b.title)
+
+            } else if (sortBy === "category") {
+                result = a.category.localeCompare(b.category)
+
+            }
+            //console.log(result)
+            return result * sortOrder;
+        });
+
+        return gameCopy;
+
+    }, [games, searchQuery, selectValue, sortBy, sortOrder,]);
+
+    const [categories, setCategories] = useState([]);
 
     useEffect(() => {
         const uniqueCategories = [];
@@ -89,10 +114,27 @@ export default function GameFilterComponent({ games }) {
                 </select>
             </div>
         </div >
-        <div className="flex flex-col gap-4 flex-wrap">
-            {filteredGames ? filteredGames?.map((game) => <GameCardComponent key={game.id} title={game.title} category={game.category} />) : <p>nessun gioco trovato</p>
-            }
-        </div>
+
+        {filteredGames.length > 0 ? <>
+            <div className="pb-3 text-end">
+
+
+                <p className="flex justify-between">
+                    <strong className="text-start" style={{ cursor: "pointer" }} onClick={() => handleSort("title")}>
+                        ordina per <br /><span>TITOLO {sortBy === "title" ? (sortOrder === 1 ? "▲" : "▼") : ""}</span>
+                    </strong>
+                    <strong style={{ cursor: "pointer" }} onClick={() => handleSort("categoria")}>
+                        ordina per <br /><span> {sortBy === "category" ? (sortOrder === 1 ? "▲" : "▼") : ""} CATEGORIA</span>
+
+                    </strong>
+                </p>
+
+            </div>
+
+            <div className="flex flex-col gap-4 flex-wrap">
+                {filteredGames?.map((game) => <GameCardComponent key={game.id} id={game.id} title={game.title} category={game.category} />)}
+
+            </div></> : <p>nessun gioco trovato</p>}
 
 
 
