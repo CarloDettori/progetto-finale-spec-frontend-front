@@ -12,7 +12,9 @@ export default function Header() {
             <nav className="flex">
 
 
-                <NavLink className="flex mx-2.5 items-center hover:scale-120" to="/games">Lista Giochi</NavLink>
+                <NavLink className="flex mx-2.5 items-center hover:scale-110" to="/games">Lista</NavLink>
+
+                <NavLink className="flex mx-2.5 items-center hover:scale-110" to="/compare">Confronta</NavLink>
 
 
 
