@@ -1,9 +1,9 @@
-import { useState, useMemo, useEffect, useCallback } from "react"
+import { useState, useMemo, useEffect } from "react"
 import GameCardComponent from "./GameCardComponent";
 
 
 
-export default function GameFilterComponent({ games }) {
+export default function GameFilterComponent({ games, onSelectGame }) {
 
     const [searchQuery, setSearchQuery] = useState("");
     const [selectValue, setSelectValue] = useState("");
@@ -132,7 +132,11 @@ export default function GameFilterComponent({ games }) {
             </div>
 
             <div className="flex flex-col gap-4 flex-wrap">
-                {filteredGames?.map((game) => <GameCardComponent key={game.id} id={game.id} title={game.title} category={game.category} />)}
+                {filteredGames?.map((game) =>
+                    <div key={game.id} onClick={() => onSelectGame && onSelectGame(game.id)} style={{ cursor: "pointer" }}>
+                        <GameCardComponent id={game.id} title={game.title} category={game.category} />
+                    </div>
+                )}
 
             </div></> : <p>nessun gioco trovato</p>}
 
