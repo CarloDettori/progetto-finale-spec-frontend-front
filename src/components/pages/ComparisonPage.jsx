@@ -28,10 +28,10 @@ export default function ComparisonPage() {
     return (<section id="comparison-section">
 
         <h1 className="pb-7.5 text-4xl"><strong>Confronta due Videogiochi</strong></h1>
-        <div className="flex justify-between pt-20">
-            <h1 className="text-center text-6xl pb-5 w-max"><strong>Videogioco 1</strong></h1>
-            <h1 className="text-center text-6xl pb-5"><strong>VS</strong></h1>
-            <h1 className="text-center text-6xl pb-5 w-max"><strong>Videogioco 2</strong></h1>
+        <div className="flex justify-between pt-20 items-end">
+            <h1 className="text-center text-3xl pb-5 w-max"><strong>Videogioco 1</strong></h1>
+            <h1 className="text-center text-8xl pb-5"><strong>VS</strong></h1>
+            <h1 className="text-center text-3xl pb-5 w-max"><strong>Videogioco 2</strong></h1>
         </div>
         <div className="flex mx-auto justify-evenly">
 

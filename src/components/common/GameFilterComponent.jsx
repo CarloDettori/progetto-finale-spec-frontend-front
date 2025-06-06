@@ -95,7 +95,7 @@ export default function GameFilterComponent({ games, onSelectGame }) {
 
     return (<>
 
-        <div className="grid gap-6 mb-6 md:grid-cols-2">
+        <div className="grid gap-6 mb-3 md:grid-cols-2">
 
             <div className="pb-10 ">
 
@@ -121,10 +121,13 @@ export default function GameFilterComponent({ games, onSelectGame }) {
 
                 <p className="flex justify-between">
                     <strong className="text-start" style={{ cursor: "pointer" }} onClick={() => handleSort("title")}>
-                        ordina per <br /><span>TITOLO {sortBy === "title" ? (sortOrder === 1 ? "▲" : "▼") : ""}</span>
+
+                        TITOLO {sortBy === "title" ? (sortOrder === 1 ? "▲" : "▼") : ""}
+
                     </strong>
-                    <strong style={{ cursor: "pointer" }} onClick={() => handleSort("categoria")}>
-                        ordina per <br /><span> {sortBy === "category" ? (sortOrder === 1 ? "▲" : "▼") : ""} CATEGORIA</span>
+                    <strong style={{ cursor: "pointer" }} onClick={() => handleSort("category")}>
+
+                        {sortBy === "category" ? (sortOrder === 1 ? "▲" : "▼") : ""} CATEGORIA
 
                     </strong>
                 </p>
@@ -138,7 +141,8 @@ export default function GameFilterComponent({ games, onSelectGame }) {
                     </div>
                 )}
 
-            </div></> : <p>nessun gioco trovato</p>}
+            </div></> : <p>nessun gioco trovato</p>
+        }
 
 
 
