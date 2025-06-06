@@ -2,12 +2,12 @@ import { useContext, useState, useRef } from "react"
 import { GlobalContext } from "../context/GlobalContext"
 import GameFilterComponent from "../common/GameFilterComponent"
 import GameDetailComponent from "../common/GameDetailcomponent"
-export default function GameListPage() {
 
-    const { games } = useContext(GlobalContext)
+export default function WishlistPage() {
+
+    const { wishGames } = useContext(GlobalContext)
     const [selectedGameId, setSelectedGameId] = useState(null)
     const detailRef = useRef(null);
-
     const handleSelectGame = (id) => {
         setSelectedGameId(id);
         setTimeout(() => {
@@ -23,10 +23,9 @@ export default function GameListPage() {
                 </div>
                 : null
             }
-            <h1 className="pb-7.5 text-4xl pb-15"><strong>Videogiochi</strong></h1>
-            <GameFilterComponent games={games} onSelectGame={handleSelectGame} />
+            <h1 className="pb-7.5 text-4xl pb-15"><strong>Lista dei deideri</strong></h1>
+            <GameFilterComponent games={wishGames} onSelectGame={handleSelectGame} />
 
         </section>
     )
 }
-

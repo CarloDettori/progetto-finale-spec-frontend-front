@@ -5,6 +5,7 @@ const GlobalContext = createContext()
 
 const GlobalProvider = ({ children }) => {
     const [games, setGames] = useState([])
+    const [wishGames, setWishGames] = useState([])
 
     async function fetchData(url) {
         const response = await fetch(url)
@@ -23,7 +24,7 @@ const GlobalProvider = ({ children }) => {
     }, [])
 
     return (
-        <GlobalContext.Provider value={{ games, setGames }}>
+        <GlobalContext.Provider value={{ games, setGames, wishGames, setWishGames }}>
             {children}
         </GlobalContext.Provider>)
 };

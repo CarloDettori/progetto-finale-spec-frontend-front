@@ -6,4 +6,42 @@ img {
     height: 100%
 }
 
+#benvenuto {
+    font-size: 500%
+}
+
+#gamingzone {
+    font-size: 800%
+}
+
+.home-link {
+    display: flex;
+    margin: 10px 0;
+    align-items: center;
+    text-align: center;
+    border: 3px solid black;
+    padding: 10px 30px;
+    border-radius: 35px;
+    background-color: white;
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+#comparison-section {
+    max-width: 1600px
+}
+
+.comparison-deck {
+    max-width: 1600px;
+    width: calc((100vw - 100px)/ 2)
+}
+
+.home-link:hover {
+    transform: scale(1.2)
+}
+
 @import "tailwindcss";
