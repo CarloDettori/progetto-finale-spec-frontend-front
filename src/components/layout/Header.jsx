@@ -1,5 +1,5 @@
 import { NavLink, Link } from "react-router-dom";
-import pad from "../../assets/favicon.webp"
+import pad from "../../assets/favicon.jpg"
 
 
 export default function Header() {

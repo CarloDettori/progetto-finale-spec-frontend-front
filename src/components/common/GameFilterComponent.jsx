@@ -29,7 +29,7 @@ export default function GameFilterComponent({ games, onSelectGame }) {
 
     }, 500)
 
-    const [sortBy, setSortBy] = useState("title");
+    const [sortBy, setSortBy] = useState("");
     const [sortOrder, setSortOrder] = useState(1);
 
     const handleSort = (column) => {
@@ -125,6 +125,9 @@ export default function GameFilterComponent({ games, onSelectGame }) {
                         TITOLO {sortBy === "title" ? (sortOrder === 1 ? "▲" : "▼") : ""}
 
                     </strong>
+
+
+
                     <strong style={{ cursor: "pointer" }} onClick={() => handleSort("category")}>
 
                         {sortBy === "category" ? (sortOrder === 1 ? "▲" : "▼") : ""} CATEGORIA
@@ -137,7 +140,7 @@ export default function GameFilterComponent({ games, onSelectGame }) {
             <div className="flex flex-col gap-4 flex-wrap">
                 {filteredGames?.map((game) =>
                     <div key={game.id} onClick={() => onSelectGame && onSelectGame(game.id)} style={{ cursor: "pointer" }}>
-                        <GameCardComponent id={game.id} title={game.title} category={game.category} />
+                        <GameCardComponent key={game.id} id={game.id} title={game.title} category={game.category} />
                     </div>
                 )}
 

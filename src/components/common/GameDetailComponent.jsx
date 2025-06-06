@@ -7,7 +7,7 @@ export default function GameDetailComponent({ id, onBack }) {
 
 
 
-    const [gameDetails, setGameDetails] = useState([])
+    const [gameDetails, setGameDetails] = useState({})
 
     async function fetchData(url) {
         const response = await fetch(url)
@@ -60,7 +60,11 @@ export default function GameDetailComponent({ id, onBack }) {
                             <p><strong>Data di uscita: </strong><span>{gameDetails.releaseDate}</span></p>
                             <div className="flex"><p><strong>Genere: </strong></p><p className="mx-1">{gameDetails.genere?.map((genere, index) => <span className="mx-1" key={index}>{genere}</span>)}</p>
                             </div>
-                            <p><strong>Dimensioni: </strong><span>{gameDetails.weightMB / 1000}</span> GB</p>
+                            <p><strong>Dimensioni: </strong><span>
+                                {typeof gameDetails.weightMB === "number" && !isNaN(gameDetails.weightMB)
+                                    ? (gameDetails.weightMB / 1000).toFixed(2)
+                                    : "--"}
+                            </span> GB</p>
                             <p><strong>Prezzo: </strong><span>{gameDetails.price}</span> €</p>
                             <p><strong>Valutazione: </strong><span>{gameDetails.score} / 100</span></p>
 
