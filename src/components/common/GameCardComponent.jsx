@@ -3,8 +3,8 @@ import { useContext, useParams } from "react"
 import { GlobalContext } from "../context/GlobalContext.jsx"
 
 export default function GameCardComponent({ id, title, category }) {
-
-    const { wishGames } = useContext(GlobalContext)
+    const { games, wishGames } = useContext(GlobalContext)
+    const game = games.find(game => game.id === id)
 
     const [addWish, delteWish] = useWish()
 
@@ -16,8 +16,8 @@ export default function GameCardComponent({ id, title, category }) {
             </div>
 
             {wishGames?.some(game => game.title === title) ?
-                <button onClick={() => delteWish(id)}><i className="fa-solid hover:pointer hover:scale-110 fa-solid fa-square-xmark cursor-pointer"></i></button> :
-                <button onClick={() => addWish(wishGames)}><i className="text-3xl hover:pointer hover:scale-130 fa-solid fa-square-plus cursor-pointer"></i></button>}
+                <button onClick={() => delteWish(id)}><i className="text-3xl fa-solid hover:pointer hover:scale-130 fa-solid fa-square-xmark cursor-pointer"></i></button> :
+                <button onClick={() => addWish(game)}><i className="text-3xl hover:pointer hover:scale-130 fa-solid fa-square-plus cursor-pointer"></i></button>}
 
 
         </div>

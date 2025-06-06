@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom"
 
 export default function useWish() {
 
-    const { wishGame, setWishGames } = useContext(GlobalContext)
+    const { wishGames, setWishGames } = useContext(GlobalContext)
     const navigate = useNavigate()
 
     const addWish = (wishedGame) => {
@@ -16,8 +16,7 @@ export default function useWish() {
 
 
     const delteWish = (id) => {
-        setWishGames(wishGame?.filter((game) => { game.id = id }))
-        navigate("/wish")
+        setWishGames(wishGames?.filter((game) => { game.id = id }))
     }
 
     return [addWish, delteWish]
