@@ -109,7 +109,7 @@ export default function GameFilterComponent({ games, onSelectGame }) {
                 <select id="countries" type="select" className="block w-full p-2 text-gray-900 shadow-md rounded-lg bg-white text-xs" placeholder="Sparatutto" onChange={handleFilter}>
 
                     <option defaultValue>-</option>
-                    {categories?.map((category, index) => <option key={index + 1} value={category} >{category}</option>)}
+                    {categories?.map((category) => <option key={category} value={category} >{category}</option>)}
 
                 </select>
             </div>
@@ -139,9 +139,7 @@ export default function GameFilterComponent({ games, onSelectGame }) {
 
             <div className="flex flex-col gap-4 flex-wrap">
                 {filteredGames?.map((game) =>
-                    <div key={game.id} onClick={() => onSelectGame && onSelectGame(game.id)} style={{ cursor: "pointer" }}>
-                        <GameCardComponent key={game.id} id={game.id} title={game.title} category={game.category} />
-                    </div>
+                    <div key={game.title} onClick={() => onSelectGame && onSelectGame(game.id)} style={{ cursor: "pointer" }}><GameCardComponent id={game.id} title={game.title} category={game.category} /></div>
                 )}
 
             </div></> : <p>nessun gioco trovato</p>

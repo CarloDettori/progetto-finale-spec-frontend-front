@@ -16,7 +16,7 @@ export default function GameCardComponent({ id, title, category }) {
             </div>
 
             {wishGames?.some(game => game.title === title) ?
-                <button onClick={() => delteWish(id)}><i className="text-3xl fa-solid hover:pointer hover:scale-130 fa-solid fa-square-xmark cursor-pointer"></i></button> :
+                <button onClick={e => { e.stopPropagation(); delteWish(title) }}><i className="text-3xl fa-solid hover:pointer hover:scale-130 fa-solid fa-square-xmark cursor-pointer"></i></button> :
                 <button onClick={() => addWish(game)}><i className="text-3xl hover:pointer hover:scale-130 fa-solid fa-square-plus cursor-pointer"></i></button>}
 
 

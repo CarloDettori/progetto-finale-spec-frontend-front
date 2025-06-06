@@ -15,8 +15,8 @@ export default function useWish() {
     }
 
 
-    const delteWish = (id) => {
-        setWishGames(wishGames?.filter((game) => { game.id = id }))
+    const delteWish = (title) => {
+        setWishGames(wishGames?.filter((game) => game.title !== title))
     }
 
     return [addWish, delteWish]
