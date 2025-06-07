@@ -1,13 +1,17 @@
 import { useState, useEffect } from "react"
-
+import useWish from "../../hooks/useWish.jsx"
+import { useContext } from "react"
+import { GlobalContext } from "../context/GlobalContext.jsx"
 
 import gotyLogo from "../../assets/GOTY.png"
 
 export default function GameDetailComponent({ id, onBack }) {
 
-
-
+    const { games, wishGames } = useContext(GlobalContext)
+    const focusedGame = games.find(game => game.id === id)
     const [gameDetails, setGameDetails] = useState({})
+
+    const [addWish, delteWish] = useWish()
 
     async function fetchData(url) {
         const response = await fetch(url)
@@ -23,54 +27,54 @@ export default function GameDetailComponent({ id, onBack }) {
     }, [id])
 
     return (<>
-        <button className=" h-10 px-6 mb-7 py-2 bg-white shadow-xl rounded-4xl" onClick={onBack}>Chiudi</button>
-        <div className="bg-white rounded-3xl p-10 shadow-xl mb-30">
+        <div className="flex justify-between">
+            <button className="h-10 px-6 mb-7 py-2 bg-white shadow-xl hover:cursor-pointer rounded-4xl arcadefont" onClick={onBack}><strong>Chiudi</strong></button>
+            {wishGames?.some(game => game.title === focusedGame.title) ?
+                <button className=" h-10 px-6 mb-7 py-2 shadow-xl hover:cursor-pointer rounded-4xl arcadefont bg-(--light-red)" onClick={e => { e.stopPropagation(); delteWish(focusedGame.title) }}><strong> rimuovi dalla wishlisti</strong></button> :
+                <button className=" h-10 px-6 mb-7 py-2 shadow-xl hover:cursor-pointer rounded-4xl arcadefont bg-(--light-green)" onClick={() => addWish(focusedGame)}><strong>aggiungi alla wishlist</strong></button>}
+        </div>
+        <div id="detail-card" className="bg-[#4a5566] rounded-3xl p-10 shadow-xl mb-30 text-white">
 
-            <div className="flex items-center justify-between h-30 gap-10 pb-10">
-
-                <div className="flex flex-col gap-1">
-                    <h1 className="text-5xl"><strong>{gameDetails.title}</strong></h1><p className="text-3xl">{gameDetails.category}</p>
-                </div>
-
-                {gameDetails.goty === true ? <img className="h-full" src={gotyLogo} alt="GOTY-img" /> : ""}
-
+            <div id="goty-logo" className="items-start w-8 h-auto item">
+                {gameDetails.goty === true ? <img src={gotyLogo} alt="GOTY-img" /> : ""}
             </div>
 
-            <div className="flex">
+            <div className="flex flex-col mb-10 gap-4">
+                <h1 className="text-5xl"><strong>{gameDetails.title}</strong></h1><p className="text-3xl">{gameDetails.category}</p>
+            </div>
 
-                {gameDetails.img ? <img className="pe-10" src={gameDetails.img} alt="" /> : null}
 
-                <div id="info"
-                    className={
-                        "flex flex-col items-start " +
-                        (gameDetails.img ? "" : "w-full")
-                    }
-                    style={gameDetails.img ? {} : { marginLeft: 0 }}
+
+            <div>
+
+                {gameDetails.img ? <img className="pe-10" src={gameDetails.img} alt="" /> : ""}
+
+                <div className={"flex flex-col items-start w-full"} style={gameDetails.img ? {} : { marginLeft: 0 }}
                 >
 
-                    <div className="flex flex-col pb-6 gap-1 border-b">
+                    <div className="flex flex-col w-full border-b pb-5 gap-1">
 
                         <p className="text-3xl" ><strong>Descrizione:</strong></p>
                         <p className="text-2xl">{gameDetails.description}</p>
 
                     </div>
-                    <div className="flex items-end w-full h-full justify-between">
-                        <div className="flex flex-col pt-6 w-full h-full justify-between">
 
-                            <p><strong>Data di uscita: </strong><span>{gameDetails.releaseDate}</span></p>
-                            <div className="flex"><p><strong>Genere: </strong></p><p className="mx-1">{gameDetails.genere?.map((genere, index) => <span className="mx-1" key={index}>{genere}</span>)}</p>
-                            </div>
-                            <p><strong>Dimensioni: </strong><span>
-                                {typeof gameDetails.weightMB === "number" && !isNaN(gameDetails.weightMB)
-                                    ? (gameDetails.weightMB / 1000).toFixed(2)
-                                    : "--"}
-                            </span> GB</p>
-                            <p><strong>Prezzo: </strong><span>{gameDetails.price}</span> €</p>
-                            <p><strong>Valutazione: </strong><span>{gameDetails.score} / 100</span></p>
+                    <div className="flex flex-col pt-5 w-full h-full justify-between">
 
+                        <p><strong>Data di uscita: </strong><span>{gameDetails.releaseDate}</span></p>
+                        <div className="flex"><p><strong>Genere: </strong></p><p className="mx-1">{gameDetails.genere?.map((genere, index) => <span className="mx-1" key={index}>{genere}</span>)}</p>
                         </div>
+                        <p><strong>Dimensioni: </strong><span>
+                            {typeof gameDetails.weightMB === "number" && !isNaN(gameDetails.weightMB)
+                                ? (gameDetails.weightMB / 1000).toFixed(2)
+                                : "--"}
+                        </span> GB</p>
+                        <p><strong>Prezzo: </strong><span>{gameDetails.price}</span> €</p>
+                        <p><strong>Valutazione: </strong><span>{gameDetails.score} / 100</span></p>
 
                     </div>
+
+
                 </div>
 
             </div>

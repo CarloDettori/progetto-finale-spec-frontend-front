@@ -20,7 +20,7 @@ export default function WishlistPage() {
     };
 
     return (
-        <section>
+        <section className="section">
 
             {selectedGameId
                 ? <div ref={detailRef}>
@@ -29,7 +29,7 @@ export default function WishlistPage() {
                 : null
             }
 
-            <h1 className="pb-7.5 text-4xl pb-15"><strong>Lista dei deideri</strong></h1>
+            <h1 className="pb-7.5 text-4xl pb-15 arcadefont"><strong>Lista dei deideri</strong></h1>
             <GameFilterComponent games={wishGames} onSelectGame={handleSelectGame} />
 
         </section>

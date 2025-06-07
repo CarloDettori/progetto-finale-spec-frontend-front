@@ -95,20 +95,21 @@ export default function GameFilterComponent({ games, onSelectGame }) {
 
     return (<>
 
-        <div className="grid gap-6 mb-3 md:grid-cols-2">
+        <div className="grid gap-6 mb-3 md:grid-cols-2 ">
 
             <div className="pb-10 ">
 
-                <label htmlFor="small-input" className="block mb-2 font-normal text-gray-700 dark:text-gray-600">Cerca un gioco</label>
+                <label htmlFor="small-input" className="block mb-2  font-normal arcadefont" ><strong>Cerca un gioco</strong></label>
 
-                <input type="text" id="small-input" className="block w-full p-2 text-gray-900 shadow-md rounded-lg bg-white text-xs focus:ring-grey-100" placeholder="Super Mario" onChange={handleFilter} />
+
+                <input type="text" id="small-input" className="bg-[#4a5566] block w-full p-2 text-white shadow-md rounded-lg text-xs" placeholder="Super Mario" onChange={handleFilter} />
             </div >
 
             <div className="pb-10">
-                <label htmlFor="countries" className="block mb-2 font-normal text-gray-700 dark:text-gray-600">Filtra per categoria</label>
-                <select id="countries" type="select" className="block w-full p-2 text-gray-900 shadow-md rounded-lg bg-white text-xs" placeholder="Sparatutto" onChange={handleFilter}>
+                <label htmlFor="countries" className="block mb-2 font-normal  arcadefont"><strong>Filtro categorie</strong></label>
+                <select id="countries" type="select" className="block w-full bg-[#4a5566] p-2 text-white shadow-md rounded-lg text-xs" onChange={handleFilter}>
 
-                    <option defaultValue>-</option>
+                    <option defaultValue>Nessuna</option>
                     {categories?.map((category) => <option key={category} value={category} >{category}</option>)}
 
                 </select>
@@ -120,7 +121,7 @@ export default function GameFilterComponent({ games, onSelectGame }) {
 
 
                 <p className="flex justify-between">
-                    <strong className="text-start" style={{ cursor: "pointer" }} onClick={() => handleSort("title")}>
+                    <strong className="text-start arcadefont" style={{ cursor: "pointer" }} onClick={() => handleSort("title")}>
 
                         TITOLO {sortBy === "title" ? (sortOrder === 1 ? "▲" : "▼") : ""}
 
@@ -128,7 +129,7 @@ export default function GameFilterComponent({ games, onSelectGame }) {
 
 
 
-                    <strong style={{ cursor: "pointer" }} onClick={() => handleSort("category")}>
+                    <strong className="arcadefont" style={{ cursor: "pointer" }} onClick={() => handleSort("category")}>
 
                         {sortBy === "category" ? (sortOrder === 1 ? "▲" : "▼") : ""} CATEGORIA
 
@@ -142,7 +143,7 @@ export default function GameFilterComponent({ games, onSelectGame }) {
                     <div key={game.title} onClick={() => onSelectGame && onSelectGame(game.id)} style={{ cursor: "pointer" }}><GameCardComponent id={game.id} title={game.title} category={game.category} /></div>
                 )}
 
-            </div></> : <p>nessun gioco trovato</p>
+            </div></> : <p className="arcadefont"><strong>nessun gioco trovato</strong></p>
         }
 
 

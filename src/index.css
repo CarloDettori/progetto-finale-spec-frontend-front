@@ -1,10 +1,18 @@
 :root {
     --custom-shadow: 0px 0px 5px;
+    --custom-grey: #4a5566;
+    --light-red: rgb(245, 215, 215);
+    --light-green: rgb(215, 245, 215);
 }
 
-img {
-    height: 100%
+@font-face {
+    font-family: 'ArcadeClassic';
+    src: url('./assets/ARCADECLASSIC.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
+
+
 
 #benvenuto {
     font-size: 500%
@@ -19,25 +27,79 @@ img {
     margin: 10px 0;
     align-items: center;
     text-align: center;
-    border: 3px solid black;
+    border: 3px solid #4a5566;
     padding: 10px 30px;
     border-radius: 35px;
     background-color: white;
+    letter-spacing: 3px;
+    word-spacing: 8px;
+    color: #4a5566;
 }
 
-section {
+
+nav,
+.arcadefont {
+    font-family: 'ArcadeClassic', Arial, sans-serif;
+    letter-spacing: 3px;
+    word-spacing: 8px;
+    color: #4a5566;
+}
+
+.arcadefont-inverted {
+    font-family: 'ArcadeClassic', Arial, sans-serif;
+    letter-spacing: 3px;
+    word-spacing: 8px;
+    color: #d7e3f5;
+}
+
+#content {
+    height: calc(100vh - 92px);
+
+}
+
+.navlink {
+    display: flex;
+    align-items: center;
+    letter-spacing: 3px;
+    word-spacing: 8px;
+
+}
+
+.navlink:hover {
+    transform: scale(1.2);
+}
+
+.sidebar {
+    height: calc(100vh - 92px);
+    flex: 0 0 265px;
+    box-shadow: var(--custom-shadow);
+    background-color: #4a5566
+}
+
+.custom-overflow {
+    overflow-y: scroll;
+}
+
+.section {
     max-width: 1200px;
     margin: 0 auto;
     padding-top: 20px;
-}
 
-#comparison-section {
-    max-width: 1600px
 }
 
 .comparison-deck {
-    max-width: 1600px;
-    width: calc((100vw - 100px)/ 2)
+
+    width: calc((100vw - 350px - 7px)/ 2)
+}
+
+#detail-card {
+    position: relative;
+}
+
+#goty-logo {
+    position: absolute;
+    top: 15px;
+    right: 15px
 }
 
 .home-link:hover {

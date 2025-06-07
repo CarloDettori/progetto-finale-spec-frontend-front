@@ -11,7 +11,6 @@ export default function useWish() {
 
     const addWish = (wishedGame) => {
         setWishGames(prev => [...prev, wishedGame])
-        navigate("/wish")
     }
 
 

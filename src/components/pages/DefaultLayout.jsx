@@ -1,16 +1,25 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Header from "../layout/Header";
-import Footer from "../layout/Footer";
-
+import SidebarComponent from "../common/SidebarComponent";
+import { useContext } from "react"
+import { GlobalContext } from "../context/GlobalContext.jsx"
 
 export default function DefaultLayout() {
-    return (<>
-        <Header />
-        <main className="p-12.5 min-h-screen bg-[#1a5ac92a]">
+    const { wishGames } = useContext(GlobalContext)
+    const location = useLocation();
 
-            <Outlet />
+    // Nascondi la sidebar solo nella pagina /wish
+    const hideSidebar = location.pathname === "/wish";
 
-        </main>
-        <Footer />
-    </>)
+    return (
+        <>
+            <Header />
+            <main className="flex pt-23 p-0 z-99 overflowx-scroll">
+                {!hideSidebar && <SidebarComponent />}
+                <section id="content" className="p-12.5 overflow-y-scroll  w-full bg-[#d7e3f5]">
+                    <Outlet />
+                </section>
+            </main>
+        </>
+    )
 }
