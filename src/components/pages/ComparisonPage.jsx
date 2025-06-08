@@ -38,7 +38,7 @@ export default function ComparisonPage() {
 
         <div className="flex mx-auto justify-evenly">
 
-            <div className="comparison-deck pe-12.5 mt-5 pb-40">
+            <div className="comparison-deck pe-12.5 mt-5 pb-10">
                 {selectedGameId1
                     ? <div ref={detailRef1} >
                         <GameDetailComponent id={selectedGameId1} onBack={() => setSelectedGameId1(null)} />
