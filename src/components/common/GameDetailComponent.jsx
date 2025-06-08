@@ -28,10 +28,10 @@ export default function GameDetailComponent({ id, onBack }) {
 
     return (<>
         <div className="flex justify-between">
-            <button className="h-10 px-6 mb-7 py-2 bg-white shadow-xl hover:cursor-pointer rounded-4xl arcadefont" onClick={onBack}><strong>Chiudi</strong></button>
+            <button className="h-10 px-6 mb-7 py-2 bg-[#4a5566] shadow-xl hover:cursor-pointer rounded-4xl arcadefont-inverted" onClick={onBack}><strong>Chiudi</strong></button>
             {wishGames?.some(game => game.title === focusedGame.title) ?
-                <button className=" h-10 px-6 mb-7 py-2 shadow-xl hover:cursor-pointer rounded-4xl arcadefont bg-(--light-red)" onClick={e => { e.stopPropagation(); delteWish(focusedGame.title) }}><strong> rimuovi dalla wishlisti</strong></button> :
-                <button className=" h-10 px-6 mb-7 py-2 shadow-xl hover:cursor-pointer rounded-4xl arcadefont bg-(--light-green)" onClick={() => addWish(focusedGame)}><strong>aggiungi alla wishlist</strong></button>}
+                <button className="h-10 px-6 mb-7 py-2 shadow-xl hover:cursor-pointer rounded-4xl arcadefont-inverted bg-[#4a5566]" onClick={e => { e.stopPropagation(); delteWish(focusedGame.title) }}><strong> rimuovi dalla wishlisti</strong></button> :
+                <button className="h-10 px-6 mb-7 py-2 shadow-xl hover:cursor-pointer rounded-4xl arcadefont-inverted bg-[#4a5566]" onClick={() => addWish(focusedGame)}><strong>aggiungi alla wishlist</strong></button>}
         </div>
         <div id="detail-card" className="bg-[#4a5566] rounded-3xl p-10 shadow-xl mb-30 text-white">
 

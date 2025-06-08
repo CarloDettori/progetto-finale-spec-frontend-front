@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from "react"
+import { useState, useMemo, useEffect, useCallback } from "react"
 import GameCardComponent from "./GameCardComponent";
 
 
@@ -19,26 +19,30 @@ export default function GameFilterComponent({ games, onSelectGame }) {
         }
     }
 
-    const handleFilter = debounce((event) => {
+    const handleFilter = useCallback(debounce((event) => {
+
         const { value, type } = event.target;
+
         if (type === "text") {
             setSearchQuery(value)
         } else {
             setSelectValue(value)
         }
 
-    }, 500)
+    }, 500))
 
     const [sortBy, setSortBy] = useState("");
     const [sortOrder, setSortOrder] = useState(1);
 
     const handleSort = (column) => {
+
         if (sortBy === column) {
             setSortOrder((prev) => prev * -1);
         } else {
             setSortBy(column);
             setSortOrder(1);
         }
+
     };
 
 

@@ -73,7 +73,11 @@ nav,
     height: calc(100vh - 92px);
     flex: 0 0 265px;
     box-shadow: var(--custom-shadow);
-    background-color: #4a5566
+    background-color: #4a5566;
+
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .custom-overflow {
@@ -88,9 +92,14 @@ nav,
 }
 
 .comparison-deck {
-
+    height: calc(100vh - 32px);
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     width: calc((100vw - 350px - 7px)/ 2)
 }
+
+
 
 #detail-card {
     position: relative;

@@ -6,7 +6,8 @@ export default function SidebarComponent() {
 
     const { wishGames } = useContext(GlobalContext)
 
-    const [addWish, delteWish] = useWish();
+    const [delteWish] = useWish();
+
 
     const [sortBy, setSortBy] = useState("");
     const [sortOrder, setSortOrder] = useState(1);
@@ -47,28 +48,17 @@ export default function SidebarComponent() {
 
     }, [wishGames, sortBy, sortOrder,]);
 
-
-
-
-
-
-
-
-
-
-
     return (
         <div className="sidebar overflow-y-scroll">
+
             {filteredGames.length > 0 ? (
                 <div className="p-5 z-50">
 
                     <div className="pb-3">
 
-                        <h1 className="arcadefont-inverted pb-5"><strong>wishlist</strong></h1>
-
                         <p className="flex justify-between">
                             <strong className="text-start arcadefont-inverted" style={{ cursor: "pointer" }} onClick={() => handleSort("title")}>
-                                TITOLO {sortBy === "title" ? (sortOrder === 1 ? "▲" : "▼") : ""}
+                                wishlist {sortBy === "title" ? (sortOrder === 1 ? "▲" : "▼") : ""}
                             </strong>
                         </p>
 
