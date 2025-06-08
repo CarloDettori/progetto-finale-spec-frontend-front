@@ -71,7 +71,7 @@ export default function GameDetailComponent({ id, onBack }) {
                         </div>
                         <p><strong>Dimensioni: </strong><span>
                             {typeof gameDetails.weightMB === "number" && !isNaN(gameDetails.weightMB)
-                                ? (gameDetails.weightMB / 1000).toFixed(2)
+                                ? (gameDetails.weightMB / 1000).toFixed()
                                 : "--"}
                         </span> GB</p>
                         <p><strong>Prezzo: </strong><span>{gameDetails.price}</span> €</p>

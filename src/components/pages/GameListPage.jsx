@@ -1,4 +1,4 @@
-import { useContext, useState, useRef } from "react"
+import { useContext, useState, useRef, useCallback } from "react"
 import { GlobalContext } from "../context/GlobalContext"
 import GameFilterComponent from "../common/GameFilterComponent"
 import GameDetailComponent from "../common/GameDetailcomponent"
@@ -9,10 +9,13 @@ export default function GameListPage() {
     const detailRef = useRef(null);
 
     const handleSelectGame = useCallback((id) => {
+
         setSelectedGameId(id);
+
         setTimeout(() => {
             detailRef.current?.scrollIntoView({ behavior: "smooth" });
         }, 100);
+
     }, []);
 
     return (
