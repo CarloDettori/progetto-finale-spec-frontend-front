@@ -54,6 +54,7 @@ nav,
 
 #content {
     height: calc(100vh - 92px);
+    padding: 50px 50px 0;
 
 }
 
@@ -88,7 +89,16 @@ nav,
     max-width: 1200px;
     margin: 0 auto;
     padding-top: 20px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 
+}
+
+section {
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .comparison-deck {
@@ -98,6 +108,9 @@ nav,
     -ms-overflow-style: none;
     width: calc((100vw - 350px - 7px)/ 2)
 }
+
+
+
 
 
 

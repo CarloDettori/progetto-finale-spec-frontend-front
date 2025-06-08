@@ -6,7 +6,7 @@ export default function SidebarComponent() {
 
     const { wishGames } = useContext(GlobalContext)
 
-    const [delteWish] = useWish();
+    const [addWish, delteWish] = useWish();
 
 
     const [sortBy, setSortBy] = useState("");
@@ -67,16 +67,12 @@ export default function SidebarComponent() {
                     <div className="flex flex-col gap-4 flex-wrap">
 
                         {filteredGames.map((game) =>
-                            <div key={game.id} className="flex justify-between bg-white p-3 rounded-xl shadow-xl">
-                                <div>
-                                    <h2 className="font-bold tracking-tight text-gray-600 wrap">{game.title}</h2>
-                                </div>
+                            <div key={game.title} className="flex justify-between bg-white p-3 rounded-xl shadow-xl">
+
+                                <h2 className="font-bold tracking-tight text-gray-600 wrap">{game.title}</h2>
 
                                 <button className="flex items-center"
-                                    onClick={e => {
-                                        e.stopPropagation();
-                                        delteWish(game.title);
-                                    }}
+                                    onClick={e => delteWish(game.title)}
                                 >
                                     <i className="text-lg fa-solid hover:pointer hover:scale-130 fa-square-xmark text-[#4a5566]"></i>
                                 </button>

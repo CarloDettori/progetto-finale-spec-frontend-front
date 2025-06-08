@@ -8,19 +8,20 @@ export default function ComparisonPage() {
     const { games } = useContext(GlobalContext)
     const [selectedGameId1, setSelectedGameId1] = useState(null)
     const [selectedGameId2, setSelectedGameId2] = useState(null)
-    const detailRef = useRef(null);
+    const detailRef1 = useRef(null);
+    const detailRef2 = useRef(null);
 
     const handleSelectGame1 = (id) => {
         setSelectedGameId1(id);
         setTimeout(() => {
-            detailRef.current?.scrollIntoView({ behavior: "smooth" });
+            detailRef1.current?.scrollIntoView({ behavior: "smooth" });
         }, 100);
     };
 
     const handleSelectGame2 = (id) => {
         setSelectedGameId2(id);
         setTimeout(() => {
-            detailRef.current?.scrollIntoView({ behavior: "smooth" });
+            detailRef2.current?.scrollIntoView({ behavior: "smooth" });
         }, 100);
     };
 
@@ -37,9 +38,9 @@ export default function ComparisonPage() {
 
         <div className="flex mx-auto justify-evenly">
 
-            <div className="comparison-deck pe-12.5 my-5">
+            <div className="comparison-deck pe-12.5 mt-5 pb-40">
                 {selectedGameId1
-                    ? <div ref={detailRef}>
+                    ? <div ref={detailRef1} >
                         <GameDetailComponent id={selectedGameId1} onBack={() => setSelectedGameId1(null)} />
                     </div>
                     : null
@@ -52,9 +53,9 @@ export default function ComparisonPage() {
                 <div className=" bg-[#4a5566] h-full w-1.5 p-0"></div>
             </div>
 
-            <div className="comparison-deck ps-12.5 my-5">
+            <div className="comparison-deck ps-12.5 mt-5 pb-10">
                 {selectedGameId2
-                    ? <div ref={detailRef}>
+                    ? <div ref={detailRef2} >
                         <GameDetailComponent id={selectedGameId2} onBack={() => setSelectedGameId2(null)} />
                     </div>
                     : null

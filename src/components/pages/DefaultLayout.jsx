@@ -16,7 +16,7 @@ export default function DefaultLayout() {
             <Header />
             <main className="flex pt-23 p-0 z-99 overflowx-scroll">
                 {!hideSidebar && <SidebarComponent />}
-                <section id="content" className="p-12.5 overflow-y-scroll  w-full bg-[#d7e3f5]">
+                <section id="content" className=" overflow-y-scroll  w-full bg-[#d7e3f5]">
                     <Outlet />
                 </section>
             </main>

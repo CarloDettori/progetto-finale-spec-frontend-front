@@ -39,18 +39,23 @@ export default function GameDetailComponent({ id, onBack }) {
                 {gameDetails.goty === true ? <img src={gotyLogo} alt="GOTY-img" /> : ""}
             </div>
 
-            <div className="flex flex-col mb-10 gap-4">
-                <h1 className="text-5xl"><strong>{gameDetails.title}</strong></h1><p className="text-3xl">{gameDetails.category}</p>
-            </div>
+
+            <strong className="text-5xl block pb-5">{gameDetails.title}</strong>
+            <p className="text-3xl block">{gameDetails.category}</p>
 
 
 
-            <div>
 
-                {gameDetails.img ? <img className="pe-10" src={gameDetails.img} alt="" /> : ""}
+            <div className="flex flex-wrap">
 
-                <div className={"flex flex-col items-start w-full"} style={gameDetails.img ? {} : { marginLeft: 0 }}
-                >
+                <img
+                    className="me-10 mt-10 rounded-lg"
+                    src={gameDetails.img || "https://placehold.co/250x300"}
+                    alt={gameDetails.title || "img"}
+                    onError={e => { e.target.src = "https://placehold.co/250x300"; }}
+                />
+
+                <div className={"flex flex-col items-start  mt-10"} style={gameDetails.img ? {} : { marginLeft: 0 }}>
 
                     <div className="flex flex-col w-full border-b pb-5 gap-1">
 
