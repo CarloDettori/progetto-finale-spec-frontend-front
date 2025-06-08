@@ -34,16 +34,14 @@ export default function GameFilterComponent({ games, onSelectGame }) {
     const [sortBy, setSortBy] = useState("");
     const [sortOrder, setSortOrder] = useState(1);
 
-    const handleSort = (column) => {
-
+    const handleSort = useCallback((column) => {
         if (sortBy === column) {
             setSortOrder((prev) => prev * -1);
         } else {
             setSortBy(column);
             setSortOrder(1);
         }
-
-    };
+    }, [sortBy]);
 
 
     const filteredGames = useMemo(() => {

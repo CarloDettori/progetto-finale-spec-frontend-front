@@ -8,12 +8,12 @@ export default function GameListPage() {
     const [selectedGameId, setSelectedGameId] = useState(null)
     const detailRef = useRef(null);
 
-    const handleSelectGame = (id) => {
+    const handleSelectGame = useCallback((id) => {
         setSelectedGameId(id);
         setTimeout(() => {
             detailRef.current?.scrollIntoView({ behavior: "smooth" });
         }, 100);
-    };
+    }, []);
 
     return (
         <section className="section">

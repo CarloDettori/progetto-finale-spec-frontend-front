@@ -1,5 +1,5 @@
 
-import { useContext, useState, useRef } from "react"
+import { useContext, useState, useRef, useCallback } from "react"
 import { GlobalContext } from "../context/GlobalContext"
 import GameDetailComponent from "../common/GameDetailcomponent"
 import GameFilterComponent from "../common/GameFilterComponent"
@@ -11,19 +11,19 @@ export default function ComparisonPage() {
     const detailRef1 = useRef(null);
     const detailRef2 = useRef(null);
 
-    const handleSelectGame1 = (id) => {
+    const handleSelectGame1 = useCallback((id) => {
         setSelectedGameId1(id);
         setTimeout(() => {
             detailRef1.current?.scrollIntoView({ behavior: "smooth" });
         }, 100);
-    };
+    }, []);
 
-    const handleSelectGame2 = (id) => {
+    const handleSelectGame2 = useCallback((id) => {
         setSelectedGameId2(id);
         setTimeout(() => {
             detailRef2.current?.scrollIntoView({ behavior: "smooth" });
         }, 100);
-    };
+    }, []);
 
 
     return (<>
