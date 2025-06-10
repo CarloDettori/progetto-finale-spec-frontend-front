@@ -1,8 +1,9 @@
 import { useContext, useState, useMemo } from "react"
 import { GlobalContext } from "../context/GlobalContext"
 import useWish from "../../hooks/useWish";
+import { memo } from "react";
 
-export default function SidebarComponent() {
+function SidebarComponent() {
 
     const { wishGames } = useContext(GlobalContext)
 
@@ -91,3 +92,5 @@ export default function SidebarComponent() {
         </div>
     )
 }
+
+export default memo(SidebarComponent);

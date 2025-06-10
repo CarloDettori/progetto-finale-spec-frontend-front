@@ -1,8 +1,9 @@
 import useWish from "../../hooks/useWish.jsx"
 import { useContext } from "react"
 import { GlobalContext } from "../context/GlobalContext.jsx"
+import { memo } from "react"
 
-export default function GameCardComponent({ id, title, category }) {
+function GameCardComponent({ id, title, category }) {
     const { games, wishGames } = useContext(GlobalContext)
     const game = games.find(game => game.id === id)
 
@@ -18,10 +19,8 @@ export default function GameCardComponent({ id, title, category }) {
             {wishGames?.some(game => game.title === title) ?
                 <button onClick={e => { e.stopPropagation(); delteWish(title) }}><i className="fa-solid hover:pointer hover:scale-130 fa-solid fa-xmark cursor-pointer text-hite)"></i></button> :
                 <button onClick={(e) => { e.stopPropagation(); addWish(game) }}><i className=" hover:pointer hover:scale-130 fa-solid fa-plus cursor-pointer text-white"></i></button>}
-
-
-        </div >
-
-
+        </div>
     )
 }
+
+export default memo(GameCardComponent);
