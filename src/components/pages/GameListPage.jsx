@@ -1,7 +1,7 @@
 import { useContext, useState, useRef, useCallback } from "react"
 import { GlobalContext } from "../context/GlobalContext"
 import GameFilterComponent from "../common/GameFilterComponent"
-import GameDetailComponent from "../common/GameDetailcomponent"
+import GameDetailComponent from "../common/GameDetailComponent"
 export default function GameListPage() {
 
     const { games } = useContext(GlobalContext)

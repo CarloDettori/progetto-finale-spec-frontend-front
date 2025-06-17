@@ -9,6 +9,7 @@ export default function GameFilterComponent({ games, onSelectGame }) {
     const [selectValue, setSelectValue] = useState("");
 
     function debounce(callback, delay) {
+
         let timer;
 
         return (value) => {
