@@ -111,7 +111,7 @@ export default function GameFilterComponent({ games, onSelectGame }) {
                 <label htmlFor="countries" className="block mb-2 font-normal  arcadefont"><strong>Filtro categorie</strong></label>
                 <select id="countries" type="select" className="block w-full bg-[#4a5566] p-2 text-white shadow-md rounded-lg text-xs" onChange={handleFilter}>
 
-                    <option defaultValue>Nessuna</option>
+                    <option value="" defaultValue>Nessuna</option>
                     {categories?.map((category) => <option key={category} value={category} >{category}</option>)}
 
                 </select>
