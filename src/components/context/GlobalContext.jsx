@@ -21,6 +21,7 @@ const GlobalProvider = ({ children }) => {
             .finally(console.log("fetch end"))
     }, [])
 
+
     useEffect(() => {
         localStorage.setItem("wishGames", JSON.stringify(wishGames));
     }, [wishGames]);
