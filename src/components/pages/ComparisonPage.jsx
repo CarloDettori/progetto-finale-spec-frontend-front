@@ -1,7 +1,7 @@
 
 import { useContext, useState, useRef, useCallback } from "react"
 import { GlobalContext } from "../context/GlobalContext"
-import GameDetailComponent from "../common/GameDetailcomponent"
+import GameDetailComponent from "../common/GameDetailComponent"
 import GameFilterComponent from "../common/GameFilterComponent"
 export default function ComparisonPage() {
 
