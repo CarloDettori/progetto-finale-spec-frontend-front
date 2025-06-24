@@ -1,0 +1,697 @@
+[
+  {
+    "title": "The Legend of Zelda: Breath of the Wild",
+    "img": "https://upload.wikimedia.org/wikipedia/en/0/0b/The_Legend_of_Zelda_Breath_of_the_Wild.jpg",
+    "description": "Un'avventura open world ambientata a Hyrule.",
+    "category": "Adventure",
+    "weightMB": 14000,
+    "genere": [
+      "Adventure",
+      "Action",
+      "Open World"
+    ],
+    "price": 59.99,
+    "goty": true,
+    "releaseDate": "2017-03-03",
+    "score": 97,
+    "id": 1,
+    "createdAt": "2025-06-08T15:09:29.099Z",
+    "updatedAt": "2025-06-08T15:09:29.099Z"
+  },
+  {
+    "title": "Super Mario Odyssey",
+    "img": "https://upload.wikimedia.org/wikipedia/en/8/8d/Super_Mario_Odyssey.jpg",
+    "description": "Mario parte per un viaggio intorno al mondo.",
+    "category": "Platform",
+    "weightMB": 5700,
+    "genere": [
+      "Platform",
+      "Adventure"
+    ],
+    "price": 49.99,
+    "goty": false,
+    "releaseDate": "2017-10-27",
+    "score": 97,
+    "id": 2,
+    "createdAt": "2025-06-08T15:09:41.968Z",
+    "updatedAt": "2025-06-08T15:09:41.968Z"
+  },
+  {
+    "title": "The Witcher 3: Wild Hunt",
+    "img": "https://upload.wikimedia.org/wikipedia/en/0/0c/Witcher_3_cover_art.jpg",
+    "description": "Un RPG open world ambientato in un universo fantasy.",
+    "category": "RPG",
+    "weightMB": 35000,
+    "genere": [
+      "RPG",
+      "Adventure",
+      "Open World"
+    ],
+    "price": 39.99,
+    "goty": true,
+    "releaseDate": "2015-05-19",
+    "score": 93,
+    "id": 3,
+    "createdAt": "2025-06-08T15:09:50.744Z",
+    "updatedAt": "2025-06-08T15:09:50.744Z"
+  },
+  {
+    "title": "Minecraft",
+    "img": "https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover.png",
+    "description": "Un sandbox game su costruzione e avventura.",
+    "category": "Sandbox",
+    "weightMB": 300,
+    "genere": [
+      "Sandbox",
+      "Survival",
+      "Adventure"
+    ],
+    "price": 26.95,
+    "goty": false,
+    "releaseDate": "2011-11-18",
+    "score": 93,
+    "id": 4,
+    "createdAt": "2025-06-08T15:09:59.977Z",
+    "updatedAt": "2025-06-08T15:09:59.977Z"
+  },
+  {
+    "title": "Grand Theft Auto V",
+    "img": "https://upload.wikimedia.org/wikipedia/en/a/a5/Grand_Theft_Auto_V.png",
+    "description": "Un action-adventure ambientato a Los Santos.",
+    "category": "Action",
+    "weightMB": 72000,
+    "genere": [
+      "Action",
+      "Adventure",
+      "Open World"
+    ],
+    "price": 29.99,
+    "goty": false,
+    "releaseDate": "2013-09-17",
+    "score": 96,
+    "id": 5,
+    "createdAt": "2025-06-08T15:10:14.319Z",
+    "updatedAt": "2025-06-08T15:10:14.319Z"
+  },
+  {
+    "title": "Red Dead Redemption 2",
+    "img": "https://upload.wikimedia.org/wikipedia/en/4/44/Red_Dead_Redemption_II.jpg",
+    "description": "Un'epopea western open world.",
+    "category": "Action",
+    "weightMB": 89000,
+    "genere": [
+      "Action",
+      "Adventure",
+      "Open World"
+    ],
+    "price": 59.99,
+    "goty": false,
+    "releaseDate": "2018-10-26",
+    "score": 97,
+    "id": 6,
+    "createdAt": "2025-06-08T15:10:26.935Z",
+    "updatedAt": "2025-06-08T15:10:26.935Z"
+  },
+  {
+    "title": "God of War",
+    "img": "https://upload.wikimedia.org/wikipedia/en/a/a7/God_of_War_4_cover.jpg",
+    "description": "Kratos affronta le divinità norrene.",
+    "category": "Action",
+    "weightMB": 45000,
+    "genere": [
+      "Action",
+      "Adventure"
+    ],
+    "price": 39.99,
+    "goty": true,
+    "releaseDate": "2018-04-20",
+    "score": 94,
+    "id": 7,
+    "createdAt": "2025-06-08T15:11:01.730Z",
+    "updatedAt": "2025-06-08T15:11:01.730Z"
+  },
+  {
+    "title": "Dark Souls III",
+    "img": "https://upload.wikimedia.org/wikipedia/en/8/8d/Dark_Souls_III_cover_art.jpg",
+    "description": "Un action RPG impegnativo e oscuro.",
+    "category": "RPG",
+    "weightMB": 25000,
+    "genere": [
+      "RPG",
+      "Action"
+    ],
+    "price": 29.99,
+    "goty": false,
+    "releaseDate": "2016-04-12",
+    "score": 89,
+    "id": 8,
+    "createdAt": "2025-06-08T15:11:13.316Z",
+    "updatedAt": "2025-06-08T15:11:13.316Z"
+  },
+  {
+    "title": "Overwatch",
+    "img": "https://upload.wikimedia.org/wikipedia/en/5/51/Overwatch_cover_art.jpg",
+    "description": "Uno sparatutto a squadre competitivo.",
+    "category": "Shooter",
+    "weightMB": 30000,
+    "genere": [
+      "Shooter",
+      "Multiplayer"
+    ],
+    "price": 39.99,
+    "goty": false,
+    "releaseDate": "2016-05-24",
+    "score": 91,
+    "id": 9,
+    "createdAt": "2025-06-08T15:11:27.815Z",
+    "updatedAt": "2025-06-08T15:11:27.815Z"
+  },
+  {
+    "title": "Fortnite",
+    "img": "https://upload.wikimedia.org/wikipedia/en/thumb/0/09/Fortnite_%282017_video_game%29.jpg/220px-Fortnite_%282017_video_game%29.jpg",
+    "description": "Battle Royale multiplayer di successo.",
+    "category": "Battle Royale",
+    "weightMB": 35000,
+    "genere": [
+      "Shooter",
+      "Battle Royale",
+      "Multiplayer"
+    ],
+    "price": 0,
+    "goty": false,
+    "releaseDate": "2017-07-21",
+    "score": 83,
+    "id": 10,
+    "createdAt": "2025-06-08T15:11:37.641Z",
+    "updatedAt": "2025-06-08T15:11:37.641Z"
+  },
+  {
+    "title": "The Last of Us Part II",
+    "img": "https://upload.wikimedia.org/wikipedia/en/4/4f/The_Last_of_Us_Part_II_cover_art.jpg",
+    "description": "Un'avventura post-apocalittica intensa.",
+    "category": "Action",
+    "weightMB": 78000,
+    "genere": [
+      "Action",
+      "Adventure"
+    ],
+    "price": 59.99,
+    "goty": true,
+    "releaseDate": "2020-06-19",
+    "score": 93,
+    "id": 11,
+    "createdAt": "2025-06-08T15:11:45.101Z",
+    "updatedAt": "2025-06-08T15:11:45.101Z"
+  },
+  {
+    "title": "Cyberpunk 2077",
+    "img": "https://upload.wikimedia.org/wikipedia/en/9/9f/Cyberpunk_2077_box_art.jpg",
+    "description": "Un RPG futuristico open world.",
+    "category": "RPG",
+    "weightMB": 70000,
+    "genere": [
+      "RPG",
+      "Action",
+      "Open World"
+    ],
+    "price": 59.99,
+    "goty": false,
+    "releaseDate": "2020-12-10",
+    "score": 86,
+    "id": 12,
+    "createdAt": "2025-06-08T15:11:52.728Z",
+    "updatedAt": "2025-06-08T15:11:52.728Z"
+  },
+  {
+    "title": "Animal Crossing: New Horizons",
+    "img": "https://upload.wikimedia.org/wikipedia/en/d/d7/Animal_Crossing_New_Horizons.jpg",
+    "description": "Gestisci la tua isola e socializza con gli abitanti.",
+    "category": "Simulation",
+    "weightMB": 6800,
+    "genere": [
+      "Simulation",
+      "Social"
+    ],
+    "price": 49.99,
+    "goty": false,
+    "releaseDate": "2020-03-20",
+    "score": 90,
+    "id": 13,
+    "createdAt": "2025-06-08T15:12:02.464Z",
+    "updatedAt": "2025-06-08T15:12:02.464Z"
+  },
+  {
+    "title": "Pokémon Sword",
+    "img": "https://upload.wikimedia.org/wikipedia/en/6/6b/Pokemon_Sword_and_Shield_box_art.jpg",
+    "description": "Cattura e allena Pokémon nella regione di Galar.",
+    "category": "RPG",
+    "weightMB": 12000,
+    "genere": [
+      "RPG",
+      "Adventure"
+    ],
+    "price": 59.99,
+    "goty": false,
+    "releaseDate": "2019-11-15",
+    "score": 80,
+    "id": 14,
+    "createdAt": "2025-06-08T15:12:11.091Z",
+    "updatedAt": "2025-06-08T15:12:11.091Z"
+  },
+  {
+    "title": "Super Smash Bros. Ultimate",
+    "img": "https://upload.wikimedia.org/wikipedia/en/5/50/Super_Smash_Bros._Ultimate.jpg",
+    "description": "Il crossover definitivo dei picchiaduro Nintendo.",
+    "category": "Fighting",
+    "weightMB": 16000,
+    "genere": [
+      "Fighting",
+      "Multiplayer"
+    ],
+    "price": 59.99,
+    "goty": false,
+    "releaseDate": "2018-12-07",
+    "score": 93,
+    "id": 15,
+    "createdAt": "2025-06-08T15:12:21.868Z",
+    "updatedAt": "2025-06-08T15:12:21.868Z"
+  },
+  {
+    "title": "Call of Duty: Modern Warfare",
+    "img": "https://upload.wikimedia.org/wikipedia/en/6/6f/Call_of_Duty_Modern_Warfare_%282019%29.jpg",
+    "description": "Sparatutto militare realistico.",
+    "category": "Shooter",
+    "weightMB": 90000,
+    "genere": [
+      "Shooter",
+      "Multiplayer"
+    ],
+    "price": 59.99,
+    "goty": false,
+    "releaseDate": "2019-10-25",
+    "score": 81,
+    "id": 16,
+    "createdAt": "2025-06-08T15:12:51.179Z",
+    "updatedAt": "2025-06-08T15:12:51.179Z"
+  },
+  {
+    "title": "FIFA 21",
+    "img": "https://upload.wikimedia.org/wikipedia/en/2/2e/FIFA_21_Cover_-_Kylian_Mbapp%C3%A9.jpg",
+    "description": "Il calcio secondo EA Sports.",
+    "category": "Sports",
+    "weightMB": 50000,
+    "genere": [
+      "Sports",
+      "Simulation"
+    ],
+    "price": 59.99,
+    "goty": false,
+    "releaseDate": "2020-10-09",
+    "score": 74,
+    "id": 17,
+    "createdAt": "2025-06-08T15:13:04.244Z",
+    "updatedAt": "2025-06-08T15:13:04.244Z"
+  },
+  {
+    "title": "NBA 2K21",
+    "img": "https://upload.wikimedia.org/wikipedia/en/7/7a/NBA_2K21_cover.jpg",
+    "description": "Simulazione di basket realistica.",
+    "category": "Sports",
+    "weightMB": 80000,
+    "genere": [
+      "Sports",
+      "Simulation"
+    ],
+    "price": 59.99,
+    "goty": false,
+    "releaseDate": "2020-09-04",
+    "score": 77,
+    "id": 18,
+    "createdAt": "2025-06-08T15:13:11.018Z",
+    "updatedAt": "2025-06-08T15:13:11.018Z"
+  },
+  {
+    "title": "Among Us",
+    "img": "https://upload.wikimedia.org/wikipedia/en/9/9a/Among_Us_cover_art.jpg",
+    "description": "Gioco di deduzione sociale e tradimento.",
+    "category": "Party",
+    "weightMB": 500,
+    "genere": [
+      "Party",
+      "Multiplayer"
+    ],
+    "price": 4.99,
+    "goty": false,
+    "releaseDate": "2018-06-15",
+    "score": 85,
+    "id": 19,
+    "createdAt": "2025-06-08T15:13:16.893Z",
+    "updatedAt": "2025-06-08T15:13:16.893Z"
+  },
+  {
+    "title": "Assassin's Creed Valhalla",
+    "img": "https://upload.wikimedia.org/wikipedia/en/a/a7/Assassin%27s_Creed_Valhalla_cover.jpg",
+    "description": "Vivi l'era vichinga con Eivor.",
+    "category": "Action",
+    "weightMB": 60000,
+    "genere": [
+      "Action",
+      "Adventure",
+      "Open World"
+    ],
+    "price": 59.99,
+    "goty": false,
+    "releaseDate": "2020-11-10",
+    "score": 84,
+    "id": 20,
+    "createdAt": "2025-06-08T15:13:27.683Z",
+    "updatedAt": "2025-06-08T15:13:27.683Z"
+  },
+  {
+    "title": "DOOM Eternal",
+    "img": "https://upload.wikimedia.org/wikipedia/en/8/8c/Doom_Eternal.jpg",
+    "description": "Sparatutto frenetico contro demoni.",
+    "category": "Shooter",
+    "weightMB": 50000,
+    "genere": [
+      "Shooter",
+      "Action"
+    ],
+    "price": 59.99,
+    "goty": false,
+    "releaseDate": "2020-03-20",
+    "score": 88,
+    "id": 21,
+    "createdAt": "2025-06-08T15:13:42.000Z",
+    "updatedAt": "2025-06-08T15:13:42.000Z"
+  },
+  {
+    "title": "Persona 5",
+    "img": "https://upload.wikimedia.org/wikipedia/en/8/8d/Persona_5_cover_art.jpg",
+    "description": "Un JRPG stiloso e profondo.",
+    "category": "RPG",
+    "weightMB": 37000,
+    "genere": [
+      "RPG",
+      "Adventure"
+    ],
+    "price": 49.99,
+    "goty": false,
+    "releaseDate": "2017-04-04",
+    "score": 93,
+    "id": 22,
+    "createdAt": "2025-06-08T15:13:49.834Z",
+    "updatedAt": "2025-06-08T15:13:49.834Z"
+  },
+  {
+    "title": "Sekiro: Shadows Die Twice",
+    "img": "https://upload.wikimedia.org/wikipedia/en/9/9c/Sekiro_art.jpg",
+    "description": "Un action impegnativo ambientato nel Giappone feudale.",
+    "category": "Action",
+    "weightMB": 25000,
+    "genere": [
+      "Action",
+      "Adventure"
+    ],
+    "price": 59.99,
+    "goty": true,
+    "releaseDate": "2019-03-22",
+    "score": 90,
+    "id": 23,
+    "createdAt": "2025-06-08T15:14:03.556Z",
+    "updatedAt": "2025-06-08T15:14:03.556Z"
+  },
+  {
+    "title": "Hades",
+    "img": "https://upload.wikimedia.org/wikipedia/en/e/e0/Hades_cover_art.jpg",
+    "description": "Un roguelike ispirato alla mitologia greca.",
+    "category": "Roguelike",
+    "weightMB": 8000,
+    "genere": [
+      "Roguelike",
+      "Action"
+    ],
+    "price": 24.99,
+    "goty": false,
+    "releaseDate": "2020-09-17",
+    "score": 93,
+    "id": 24,
+    "createdAt": "2025-06-08T15:14:12.551Z",
+    "updatedAt": "2025-06-08T15:14:12.551Z"
+  },
+  {
+    "title": "Celeste",
+    "img": "https://upload.wikimedia.org/wikipedia/en/9/9a/Celeste_box_art_final.png",
+    "description": "Platform impegnativo e toccante.",
+    "category": "Platform",
+    "weightMB": 1200,
+    "genere": [
+      "Platform",
+      "Indie"
+    ],
+    "price": 19.99,
+    "goty": false,
+    "releaseDate": "2018-01-25",
+    "score": 94,
+    "id": 25,
+    "createdAt": "2025-06-08T15:14:17.650Z",
+    "updatedAt": "2025-06-08T15:14:17.650Z"
+  },
+  {
+    "title": "Hollow Knight",
+    "img": "https://upload.wikimedia.org/wikipedia/en/0/0e/Hollow_Knight_cover.jpg",
+    "description": "Un metroidvania indie acclamato.",
+    "category": "Metroidvania",
+    "weightMB": 9000,
+    "genere": [
+      "Metroidvania",
+      "Adventure"
+    ],
+    "price": 14.99,
+    "goty": false,
+    "releaseDate": "2017-02-24",
+    "score": 90,
+    "id": 26,
+    "createdAt": "2025-06-08T15:14:24.107Z",
+    "updatedAt": "2025-06-08T15:14:24.107Z"
+  },
+  {
+    "title": "Cuphead",
+    "img": "https://upload.wikimedia.org/wikipedia/en/2/2a/Cuphead_%28artwork%29.jpg",
+    "description": "Platform run-and-gun con grafica cartoon anni '30.",
+    "category": "Platform",
+    "weightMB": 4000,
+    "genere": [
+      "Platform",
+      "Shooter"
+    ],
+    "price": 19.99,
+    "goty": false,
+    "releaseDate": "2017-09-29",
+    "score": 88,
+    "id": 27,
+    "createdAt": "2025-06-08T15:14:32.340Z",
+    "updatedAt": "2025-06-08T15:14:32.340Z"
+  },
+  {
+    "title": "Monster Hunter: World",
+    "img": "https://upload.wikimedia.org/wikipedia/en/2/2c/Monster_Hunter_World_cover_art.jpg",
+    "description": "Caccia mostri giganti in un mondo vivo.",
+    "category": "Action",
+    "weightMB": 48000,
+    "genere": [
+      "Action",
+      "RPG"
+    ],
+    "price": 49.99,
+    "goty": false,
+    "releaseDate": "2018-01-26",
+    "score": 90,
+    "id": 28,
+    "createdAt": "2025-06-08T15:14:38.146Z",
+    "updatedAt": "2025-06-08T15:14:38.146Z"
+  },
+  {
+    "title": "Splatoon 2",
+    "img": "https://upload.wikimedia.org/wikipedia/en/6/6e/Splatoon_2.jpg",
+    "description": "Sparatutto a squadre colorato e frenetico.",
+    "category": "Shooter",
+    "weightMB": 6000,
+    "genere": [
+      "Shooter",
+      "Multiplayer"
+    ],
+    "price": 49.99,
+    "goty": false,
+    "releaseDate": "2017-07-21",
+    "score": 83,
+    "id": 29,
+    "createdAt": "2025-06-08T15:14:43.700Z",
+    "updatedAt": "2025-06-08T15:14:43.700Z"
+  },
+  {
+    "title": "Mario Kart 8 Deluxe",
+    "img": "https://upload.wikimedia.org/wikipedia/en/9/92/Mario_Kart_8_Deluxe.jpg",
+    "description": "Il miglior gioco di corse arcade Nintendo.",
+    "category": "Racing",
+    "weightMB": 7000,
+    "genere": [
+      "Racing",
+      "Multiplayer"
+    ],
+    "price": 59.99,
+    "goty": false,
+    "releaseDate": "2017-04-28",
+    "score": 92,
+    "id": 30,
+    "createdAt": "2025-06-08T15:14:51.895Z",
+    "updatedAt": "2025-06-08T15:14:51.895Z"
+  },
+  {
+    "title": "Rocket League",
+    "img": "https://upload.wikimedia.org/wikipedia/en/c/c1/Rocket_League_cover.jpg",
+    "description": "Calcio con le auto in arene spettacolari.",
+    "category": "Sports",
+    "weightMB": 6000,
+    "genere": [
+      "Sports",
+      "Racing",
+      "Multiplayer"
+    ],
+    "price": 19.99,
+    "goty": false,
+    "releaseDate": "2015-07-07",
+    "score": 86,
+    "id": 31,
+    "createdAt": "2025-06-08T15:14:58.363Z",
+    "updatedAt": "2025-06-08T15:14:58.363Z"
+  },
+  {
+    "title": "Portal 2",
+    "img": "https://upload.wikimedia.org/wikipedia/en/f/f9/Portal2cover.jpg",
+    "description": "Puzzle game con portali e umorismo.",
+    "category": "Puzzle",
+    "weightMB": 8000,
+    "genere": [
+      "Puzzle",
+      "Adventure"
+    ],
+    "price": 19.99,
+    "goty": false,
+    "releaseDate": "2011-04-19",
+    "score": 95,
+    "id": 32,
+    "createdAt": "2025-06-08T15:15:06.884Z",
+    "updatedAt": "2025-06-08T15:15:06.884Z"
+  },
+  {
+    "title": "Bioshock Infinite",
+    "img": "https://upload.wikimedia.org/wikipedia/en/6/6b/BioShock_Infinite_cover.jpg",
+    "description": "Sparatutto narrativo ambientato a Columbia.",
+    "category": "Shooter",
+    "weightMB": 20000,
+    "genere": [
+      "Shooter",
+      "Adventure"
+    ],
+    "price": 29.99,
+    "goty": false,
+    "releaseDate": "2013-03-26",
+    "score": 94,
+    "id": 33,
+    "createdAt": "2025-06-08T15:15:24.163Z",
+    "updatedAt": "2025-06-08T15:15:24.163Z"
+  },
+  {
+    "title": "Uncharted 4: Fine di un Ladro",
+    "img": "https://upload.wikimedia.org/wikipedia/en/3/3e/Uncharted_4_box_artwork.jpg",
+    "description": "L'ultima avventura di Nathan Drake.",
+    "category": "Action",
+    "weightMB": 50000,
+    "genere": [
+      "Action",
+      "Adventure"
+    ],
+    "price": 39.99,
+    "goty": false,
+    "releaseDate": "2016-05-10",
+    "score": 93,
+    "id": 34,
+    "createdAt": "2025-06-08T15:15:33.125Z",
+    "updatedAt": "2025-06-08T15:15:33.125Z"
+  },
+  {
+    "title": "Metal Gear Solid V: The Phantom Pain",
+    "img": "https://upload.wikimedia.org/wikipedia/en/2/20/Metal_Gear_Solid_V_The_Phantom_Pain_cover.jpg",
+    "description": "Stealth action in un mondo aperto.",
+    "category": "Stealth",
+    "weightMB": 35000,
+    "genere": [
+      "Stealth",
+      "Action",
+      "Open World"
+    ],
+    "price": 29.99,
+    "goty": false,
+    "releaseDate": "2015-09-01",
+    "score": 91,
+    "id": 35,
+    "createdAt": "2025-06-08T15:15:39.437Z",
+    "updatedAt": "2025-06-08T15:15:39.437Z"
+  },
+  {
+    "title": "Bloodborne",
+    "img": "https://upload.wikimedia.org/wikipedia/en/6/6d/Bloodborne_Cover_Wallpaper.jpg",
+    "description": "Action RPG oscuro e impegnativo.",
+    "category": "RPG",
+    "weightMB": 27000,
+    "genere": [
+      "RPG",
+      "Action"
+    ],
+    "price": 39.99,
+    "goty": false,
+    "releaseDate": "2015-03-24",
+    "score": 92,
+    "id": 36,
+    "createdAt": "2025-06-08T15:15:45.346Z",
+    "updatedAt": "2025-06-08T15:15:45.346Z"
+  },
+  {
+    "title": "Resident Evil 2",
+    "img": "https://upload.wikimedia.org/wikipedia/en/0/05/Resident_Evil_2_Remake.jpg",
+    "description": "Remake survival horror di un classico.",
+    "category": "Horror",
+    "weightMB": 26000,
+    "genere": [
+      "Horror",
+      "Survival"
+    ],
+    "price": 39.99,
+    "goty": false,
+    "releaseDate": "2019-01-25",
+    "score": 91,
+    "id": 37,
+    "createdAt": "2025-06-08T15:15:50.976Z",
+    "updatedAt": "2025-06-08T15:15:50.976Z"
+  },
+  {
+    "title": "The Elder Scrolls V: Skyrim",
+    "img": "https://upload.wikimedia.org/wikipedia/en/3/3c/The_Elder_Scrolls_V_Skyrim_cover.png",
+    "description": "RPG open world fantasy epico.",
+    "category": "RPG",
+    "weightMB": 12000,
+    "genere": [
+      "RPG",
+      "Adventure",
+      "Open World"
+    ],
+    "price": 39.99,
+    "goty": false,
+    "releaseDate": "2011-11-11",
+    "score": 94,
+    "id": 38,
+    "createdAt": "2025-06-08T15:15:57.169Z",
+    "updatedAt": "2025-06-08T15:15:57.169Z"
+  }
+]
