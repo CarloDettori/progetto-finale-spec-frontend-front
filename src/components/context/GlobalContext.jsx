@@ -15,7 +15,7 @@ const GlobalProvider = ({ children }) => {
     }
 
     useEffect(() => {
-        fetchData("https://carlodettorigeneral1.netlify.app/database/games.json")
+        fetchData("/database/games.json")
             .then(obj => setGames(obj))
             .catch(error => console.error(error))
             .finally(console.log("fetch end"))
